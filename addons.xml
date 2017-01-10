@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon 
+  id="repository.avario" 
+  name="Avario Kodi Addons" 
+  version="0.1.0" 
+  provider-name="www.avar.io">
+	<extension point="xbmc.addon.repository" 
+             name="Avario Kodi Addons">
+    <info compressed="false">http://192.168.0.22:8123/local/kodirepo/addons.xml</info>
+    <checksum>http://192.168.0.22:8123/local/kodirepo/addons.xml.md5</checksum>
+    <datadir>http://192.168.0.22:8123/local/kodirepo/files/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Locally hosted Repo for Avario Kodi Addons</summary>
+		<description>New and Updated Avario addons accessible through here.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.popup"
+       name="Avario Popup"
+       version="0.1.0"
+       provider-name="www.avar.io">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">A script to support the popup of notifications from Avario.</summary>
+    <description lang="en">A script to support the popup of notifications from Avario.</description>
+  </extension>
+</addon>
+
+<addon id="avario.trigger" name="Kodi Avario Z-Wave Addon" version="0.1.0" provider-name="www.avar.io">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="1.1.0"/>
+    </requires>
+  
+    <extension point="xbmc.service" library="default.py" start="startup" />
+  
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>Eng</language>
+        <summary lang="en">Avario Scene Trigger</summary>
+        <description lang="en">Trigger an Avario Action based on Kodi events.
+
+IMPORTANT: Disable/Enable after changing settings - or restart Kodi.</description>
+
+    </extension>
+</addon>
+
+</addons>
