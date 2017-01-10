@@ -7,9 +7,9 @@
   provider-name="www.avar.io">
 	<extension point="xbmc.addon.repository" 
              name="Avario Kodi Addons">
-    <info>https://github.com/avariorss/KodiRepo/edit/master/addons.xml</info>
-    <checksum>https://github.com/avariorss/KodiRepo/edit/master/addons.xml.md5</checksum>
-    <datadir>https://github.com/avariorss/KodiRepo/edit/master/files/</datadir>
+    <info>https://raw.githubusercontent.com/avariorss/KodiRepo/master/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/avariorss/KodiRepo/master/addons.xml.md5</checksum>
+    <datadir>https://raw.githubusercontent.com/avariorss/KodiRepo/master/files</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Locally hosted Repo for Avario Kodi Addons</summary>
@@ -17,4 +17,41 @@
 		<platform>all</platform>
 	</extension>
 </addon>
+
+<addon id="script.popup"
+       name="Avario Popup"
+       version="0.1.0"
+       provider-name="www.avar.io">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">A script to support the popup of notifications from Avario.</summary>
+    <description lang="en">A script to support the popup of notifications from Avario.</description>
+  </extension>
+</addon>
+
+<addon id="avario.trigger" name="Kodi Avario Z-Wave Addon" version="0.1.0" provider-name="www.avar.io">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="1.1.0"/>
+    </requires>
+  
+    <extension point="xbmc.service" library="default.py" start="startup" />
+  
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>Eng</language>
+        <summary lang="en">Avario Scene Trigger</summary>
+        <description lang="en">Trigger an Avario Action based on Kodi events.
+
+IMPORTANT: Disable/Enable after changing settings - or restart Kodi.</description>
+
+    </extension>
+</addon>
+
 </addons>
