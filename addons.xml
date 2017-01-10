@@ -3,7 +3,7 @@
 <addon 
   id="repository.avario" 
   name="Avario Kodi Addons" 
-  version="0.1.0" 
+  version="0.1.6" 
   provider-name="www.avar.io">
 	<extension point="xbmc.addon.repository" 
              name="Avario Kodi Addons">
